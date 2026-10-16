@@ -117,7 +117,7 @@ void exitDaemon(int code) {
 }
 
 int main(int argc, char** argv) {
-	QCoreApplication::setApplicationName("quickshell");
+	QCoreApplication::setApplicationName("oberonqs");
 
 #if CRASH_HANDLER
 	qsCheckCrash(argc, argv);

@@ -160,12 +160,6 @@ if (USE_JEMALLOC)
 	target_link_libraries(quickshell PRIVATE ${JEMALLOC_LIBRARIES})
 endif()
 
-install(CODE "
-	execute_process(
-		COMMAND ${CMAKE_COMMAND} -E create_symlink \
-		${CMAKE_INSTALL_FULL_BINDIR}/quickshell \$ENV{DESTDIR}${CMAKE_INSTALL_FULL_BINDIR}/qs
-	)
-")
 
 install(
 	FILES ${CMAKE_SOURCE_DIR}/assets/org.quickshell.desktop
